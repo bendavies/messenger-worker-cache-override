@@ -15,5 +15,8 @@ framework:
         #app: cache.adapter.apcu
 
         # Namespaced pools use the above "app" backend by default
-        #pools:
-            #my.dedicated.cache: null
+        pools:
+            cache.db:
+                adapter: 'cache.adapter.pdo'
+                public: true
+                default_lifetime: 1800
